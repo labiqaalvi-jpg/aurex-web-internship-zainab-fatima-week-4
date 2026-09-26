@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zainab Fatima - Aurex Week 4 Task Manager</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Header Banner -->
+        <header class="app-header">
+            <div class="header-content">
+                <h1><i class="fa-solid fa-list-check"></i> TaskFlow Pro</h1>
+                <p>Aurex Full-Stack Engineering Internship | Week 4 • <strong>Zainab Fatima</strong></p>
+            </div>
+            <div class="progress-box">
+                <span id="progress-text">0% Completed</span>
+                <div class="progress-bar-bg">
+                    <div id="progress-fill" class="progress-bar-fill"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Input & Form Section -->
+        <section class="task-form-section">
+            <form id="task-form">
+                <div class="input-row">
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <input type="text" id="task-input" placeholder="What needs to be done today?" autocomplete="off">
+                    </div>
+                    <div class="select-wrapper">
+                        <select id="priority-input">
+                            <option value="Low">🟢 Low Priority</option>
+                            <option value="Medium" selected>🟡 Medium Priority</option>
+                            <option value="High">🔴 High Priority</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="add-btn">
+                        <i class="fa-solid fa-plus"></i> <span id="btn-text">Add Task</span>
+                    </button>
+                </div>
+                <small id="error-msg" class="error-text"></small>
+            </form>
+        </section>
+
+        <!-- Controls & Filters -->
+        <section class="controls-section">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Tasks</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            <div class="task-stats">
+                <span>Total: <strong id="total-count">0</strong></span>
+            </div>
+        </section>
+
+        <!-- Task List Area -->
+        <section class="task-list-section">
+            <ul id="task-list">
+                <!-- Dynamic Tasks Render Here -->
+            </ul>
+            <div id="empty-state" class="empty-state hidden">
+                <i class="fa-regular fa-clipboard"></i>
+                <h3>No tasks found</h3>
+                <p>Add your first task above to get started with your productive day!</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+                                    </html>
+                                    
